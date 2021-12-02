@@ -1,0 +1,131 @@
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.tech-slideshow {
+    height: 350px;
+     width: 350px;
+      max-width: 80%;
+    text-align: center;
+    
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  .project-card{
+      border: 1px solid rgba(173, 126, 216,.5);;
+      border-radius: 0 0 10px 10px;
+      transition: .5s box-shadow;
+      width: 450px;
+      max-width: 90%;
+      
+  }
+  .project-card:hover{
+      box-shadow: 0 4px 8px 0 rgba(109, 53, 165,0.4);
+  }
+  .project-text{
+      padding: 20px 10px;
+    
+  }
+  .raceredge>.tech-slideshow > div {
+    height: 1000px;
+    width: 450px;
+    max-width: 90%;
+    background: url('../../media/raceredge.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+
+    background-size: cover;
+    
+    transform: translate3d(0, 0, 0);
+  }
+
+
+  .travisit>.tech-slideshow > div {
+    height: 1000px;
+    width: 450px;
+    background: url('../../media/travisit.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+
+    background-size: cover;
+    
+    transform: translate3d(0, 0, 0);
+  }
+
+
+  .healtho>.tech-slideshow > div {
+    height: 1000px;
+    width: 450px;
+    background: url('../../media/healtho.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+
+    background-size: cover;
+    
+    transform: translate3d(0, 0, 0);
+  }
+
+
+  .financio>.tech-slideshow > div {
+    height: 500px;
+    width: 450px;
+    background: url('../../media/financio.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+
+    background-size: cover;
+    
+    transform: translate3d(0, 0, 0);
+  }
+
+
+  .lazyCrew>.tech-slideshow > div {
+    height: 500px;
+    width: 450px;
+    background: url('../../media/lazy\ crew.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+
+    background-size: cover;
+    
+    transform: translate3d(0, 0, 0);
+  }
+
+  .project-card:hover .mover-1 {
+    animation: moveSlideshow 12s linear infinite;
+    
+  }
+  .tech-slideshow .mover-2 {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    background-position: 0 -200px;
+    animation: moveSlideshow 15s linear infinite;
+  }
+  .tech-slideshow:hover .mover-2 {
+    opacity: 1;
+  }
+  
+  @keyframes moveSlideshow {
+    100% { 
+      transform: translateY(-66.6666%);  
+    }
+  }
+
+  @media only screen and (max-width:762px) {
+    .projects{
+        grid-template-columns: repeat(1,350px);
+    }
+ }

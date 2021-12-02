@@ -1,0 +1,100 @@
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.image{
+    width: 30%;
+    text-align: right;
+  
+}
+.image img{
+    max-width: 350px;
+    height: 350px;
+    width: 80%;
+    border-radius: 50%;
+}
+.intro-text{
+    width: 40%;
+    margin-left: 40px;
+    line-height: 20px;
+    color: white;
+    transition: .4s color;
+}
+.intro-text .name-portion{
+    color: #36e60a;
+}
+.intro-text h3{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.intro-text h1{
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: rgb(247, 236, 236);
+}
+.intro-text p{
+    font-weight: 600;
+    color: rgb(230, 219, 230);
+    width: 75%;
+}
+.social-link {
+    font-size: 2rem;
+    color:#8444DF;
+    margin-right: .5em;
+}
+.social-link:hover{
+    color:rgb(8, 184, 22); 
+    cursor: pointer;
+}
+.gen-btn{
+    padding: 10px 30px;
+    background-color: #8444DF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: .4s background-color;
+}
+.gen-btn:hover{
+    background-color: rgb(8, 184, 22);
+    color: white;
+}
+
+@media only screen and (max-width:762px) {
+    .intro{
+        flex-direction: column;
+    }
+    .image{
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+    .intro-text{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    .intro-text h1{
+    font-size: 2rem;
+    }
+
+    .intro-text p{
+        width: 100%;
+    }
+
+   
+    
+}

@@ -1,0 +1,124 @@
+[
+    {
+      "id": 0,
+      "title": "RACEREDGE-Bikers solution",
+      "desc": "A single product category selling website. It is fully responsive for all devices.",
+      "Feature": [
+        "Check Out",
+        "Payment with Stripe",
+        " Product adding,",
+        "Purchase Product",
+        "Productdelete",
+        "admin panel",
+        "user dashboard",
+        "login and registration"
+      ],
+      "Technology": [
+        "React JS",
+        "React Router,",
+        "Node JS",
+        "Express JS,",
+        "MongoDB",
+        "React BoFirebase Authentication"
+      ],
+      "live": "https://racer-edge.web.app/",
+      "clientlink": "https://github.com/Dev-Arif-sys/bikeSelling-website-client-side",
+      "serverlink": "https://github.com/Dev-Arif-sys/bikeSelling-website-server-side",
+      "img1": "https://i.ibb.co/bW2bFv3/racer-1-1-min.png",
+      "img2": "https://i.ibb.co/FgRNhZ5/racer-2-min.png",
+      "img3": "https://i.ibb.co/C5H5B9c/racer-3-min.png"
+    },
+    {
+      "id": 1,
+      "title": "TRAVISit-Tourism Management Website",
+      "desc": "A Tourism application where users can Be able to book various services in the tourist area. A dashboard is added for maintenance and it is fully responsive for all devices",
+      "Feature": [
+        "Check Out",
+        "Tourism management",
+        "order history",
+        "admin panel",
+        "user dashboard",
+        "login and registration"
+      ],
+      "Technology": [
+        "React JS",
+        "React Router,",
+        "Node JS",
+        "Express JS,",
+        "MongoDB",
+        "React BoFirebase Authentication"
+      ],
+      "live": "https://travisit-tour.web.app/",
+      "clientlink": "https://github.com/Dev-Arif-sys/travisit-Tourism-Website",
+      "serverlink": "https://github.com/Dev-Arif-sys/travisit-tourism-server-site",
+      "img1": "https://i.ibb.co/80MrBCv/travisit-1-min.png",
+      "img2": "https://i.ibb.co/KDJ7Qvd/travisit-2-min.png",
+      "img3": "https://i.ibb.co/QCWPsBN/travisit-3-min.png"
+    },
+    {
+      "id": 2,
+      "title": "Healtho-Healthcare Website",
+      "desc": "A single-page application for a clinic where a patient can make an appointment with a doctor.It is fully responsive for all devices",
+      "Feature": [
+        "Appointment with date and time",
+        "Appointment management",
+        "Doctor ManagemenT technology"
+      ],
+      "Technology": [
+        "React JS",
+        "React Router,",
+        "Node JS",
+        "Express JS,",
+        "MongoDB",
+        "React BoFirebase Authentication"
+      ],
+      "live": "https://healtho.netlify.app/",
+      "clientlink": "https://github.com/Dev-Arif-sys/healtho-Healtcare-website",
+      "img1": "https://i.ibb.co/mtLt7yw/healtho-1-min.png",
+      "img2": "https://i.ibb.co/3RnQx0t/healtho-2-min.png",
+      "img3": "https://i.ibb.co/K6J3d5r/healtho-3-min.png"
+    },
+    {
+      "id": 3,
+      "title": "Financio-e-learning website",
+      "desc": "an e-learning website with a lot of functionality.",
+      "Feature": [
+        "Single page application",
+        " Four ROuting with React Router ",
+        "Contact page integration "
+      ],
+      "Technology": [
+        "HTML",
+        "CSS",
+        "React",
+        "React-Bootstrap",
+        "react-router"
+      ],
+      "live": "https://sanjuhassan79.github.io/dashboard-html-css/",
+      "clientlink": "https://github.com/sanjuhassan79/dashboard-html-css",
+      "img1": "https://i.ibb.co/Sy1fSHq/financio-1-min.png",
+      "img2": "https://i.ibb.co/qYcsP9N/financio-2-min.png",
+      "img3": "https://i.ibb.co/kDbZRGp/financio-3-min.png"
+    },
+    {
+      "id": 4,
+      "title": "The Lazy Crew",
+      "desc": "A collection fo developers from lazy crew team with their salary management .",
+      "Feature": [
+        "Salary Counting ",
+        " Total Salary showing ",
+        "Salary with name "
+      ],
+      "Technology": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "Javascript"
+      ],
+      "live": "https://the-lazy-crew.netlify.app/",
+      "clientlink": "https://github.com/Dev-Arif-sys/The-Lazy-Crew-Developer",
+      "img1": "https://i.ibb.co/PtCFBSD/lazy-1-min.png",
+      "img2": "https://i.ibb.co/FB4D32t/lazy-2-min.png",
+      "img3": "https://i.ibb.co/PtCFBSD/lazy-1-min.png"
+    }
+  ]

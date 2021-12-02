@@ -1,0 +1,33 @@
+.bot-modal{
+    background-color: #080525;
+    
+}
+
+.slider-part{
+   width: 50%;
+}
+
+@media only screen and (max-width:762px) {
+    .slider-part{
+        width: 100%;
+     }
+}
+
+.tech{
+    background-color: antiquewhite;
+    padding: .5em .8em;
+    margin: .3em;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor:zoom-in;
+    
+}
+
+.redirect-link{
+    color: rgb(94, 189, 5);
+    text-decoration: none;
+}
+.redirect-link:hover{
+    color: chocolate;
+}

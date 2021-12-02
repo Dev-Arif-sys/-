@@ -1,0 +1,33 @@
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    
+   
+}
+.skill{
+    text-align: center;
+    padding: 6px;
+    border: 1px solid rgba(173, 126, 216,.5);
+    width: 90px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(68, 106, 223,.2);
+    transition: .3s box-shadow;
+}
+.skill:hover{
+    box-shadow: 0 4px 8px 0 rgba(19, 42, 112, 0.5);
+}
+.skill p{
+    font-size: .8rem;
+    margin-top: 10px;
+}
+
+.skill .logo{
+    width: 30px;
+}
+
+@media only screen and (max-width:762px) {
+   .skills-container{
+       grid-template-columns: repeat(3,1fr);
+   } 
+}

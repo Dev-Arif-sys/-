@@ -1,0 +1,113 @@
+#sideBar{
+    width: 100px;
+    background-color: #8444DF;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transition: .4s width;
+}
+.toggle-btn{
+    position: fixed;
+    background-color: rgba(216, 191, 216,.3);
+    
+    padding: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    top:30px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 5;
+    border: none;
+    display: none;
+    
+}
+#sideBar:hover{
+    width: 220px;
+}
+
+#sideBar h1{
+    font-size: 4rem;
+    margin-top: 0;
+    height: 20%;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    font-weight: 300;
+    
+}
+.barItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+  
+}
+#sideBar a {
+    
+    font-size: .8rem;
+    padding: 16px 8px;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+  display: inline-block;
+    text-align: left;
+    border-radius: 10px;
+    position: relative;
+  
+    
+}
+
+#sideBar a:hover{
+    background-color:#9359e6 ;
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
+}
+#sideBar:hover .barItems{
+    margin-left: -40px;
+}
+
+#sideBar a span{
+    text-transform: uppercase;
+    
+     letter-spacing: 3px;
+     display: inline-block;
+     font-weight: 400;
+     display: none;
+     
+     opacity: 0;
+     transition: 1s opacity;
+     margin-left: 8px;
+     position:absolute ;
+}
+#sideBar:hover a span{
+    opacity: 1;
+    display: inline-block;
+}
+
+
+
+@media only screen and (max-width:762px) {
+   
+    .active{
+        display: block;
+        width: 220px;
+       
+    }
+    .deactive{
+        display: none;
+    }
+    #sideBar a span{
+        display: inline-block;
+    }
+
+    .toggle-btn{
+        display: inline-block;
+    }
+
+   
+   
+}
