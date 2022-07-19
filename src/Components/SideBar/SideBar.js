@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import './SideBar.css'
+import { faBars, faBriefcase, faCoffee, faHome, faLaptopCode, faPhoneAlt, faProjectDiagram, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee,faHome,faUser,faLaptopCode,faBriefcase,faPhoneAlt,faBars } from '@fortawesome/free-solid-svg-icons'
-import Button from '@restart/ui/esm/Button';
+import { useState } from 'react';
+import './SideBar.css';
 
 
 const SideBar = () => {
@@ -12,6 +11,7 @@ const SideBar = () => {
     const user = <FontAwesomeIcon icon={faUser} />
     const code = <FontAwesomeIcon icon={faLaptopCode} />
     const work = <FontAwesomeIcon icon={faBriefcase} />
+    const project = <FontAwesomeIcon icon={faProjectDiagram} />
     const contact=<FontAwesomeIcon icon={faPhoneAlt} />
     const bars=<FontAwesomeIcon icon={faBars} />
     const toggleBar=()=>{
@@ -30,7 +30,8 @@ const SideBar = () => {
            <a href="#home"> {home} <span>Home</span></a>
          <a href="#about"> {user}  <span>About</span></a>
           <a href="#skills">{code} <span>skills</span></a>
-              <a href="#project">{work}<span>Works</span></a>
+          <a href="#experience">{work} <span>Experience</span></a>
+              <a href="#project">{project}<span>Projects</span></a>
               <a href="#blogs">{work}<span>Blogs</span></a>
               <a href="#contact">{contact}<span>contact</span></a>
               </div>

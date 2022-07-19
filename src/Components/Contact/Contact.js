@@ -1,9 +1,7 @@
-import Button from '@restart/ui/esm/Button';
-import React, { useEffect } from 'react';
-import { Col, Form, Row } from 'react-bootstrap';
-import emailjs from 'emailjs-com';
 import Aos from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
+import emailjs from 'emailjs-com';
+import React, { useEffect } from 'react';
 
 const Contact = () => {
     const Swal = require('sweetalert2')
@@ -44,7 +42,7 @@ const Contact = () => {
                 <h2 className='section-title'>Contact</h2>
                 <div data-aos='zoom-in-right' className='section-value about-text'>
 
-                    <form onSubmit={sendEmail}>
+                    {/* <form onSubmit={sendEmail}>
                         <Row>
                             <Col>
                                 <Form.Control placeholder="Name" name='name' />
@@ -59,13 +57,13 @@ const Contact = () => {
                             name='message'
                             placeholder="Leave a message here"
                             style={{ height: '100px' }}
-                        />
+                        /> */}
 
-                        <Button className='btn btn-primary mt-2' type="submit">
+                        {/* <Button className='btn btn-primary mt-2' type="submit">
                             Submit
-                        </Button>
+                        </Button> */}
 
-                    </form>
+                    {/* </form> */}
                 </div>
 
             </div>

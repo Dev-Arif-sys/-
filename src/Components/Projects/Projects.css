@@ -29,6 +29,21 @@
       padding: 20px 10px;
     
   }
+
+  .emarket>.tech-slideshow > div {
+    height: 1000px;
+    width: 450px;
+    max-width: 90%;
+    background: url('https://i.ibb.co/tZQmCQ0/screencapture-emarket-u-netlify-app-2022-06-24-02-03-46.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+
+    background-size: cover;
+    
+    transform: translate3d(0, 0, 0);
+  }
   .raceredge>.tech-slideshow > div {
     height: 1000px;
     width: 450px;

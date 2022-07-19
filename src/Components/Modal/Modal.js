@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Modal,Button } from 'react-bootstrap';
-import MySlider from '../slider/MySlider';
-import './Modal.css'
-import { FaArrowRight } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import './Modal.css';
 
 
 
@@ -16,7 +13,9 @@ const ModalProject = (props) => {
         .then(res=>res.json())
         .then(data=>setProject(data))
     },[])
+    
     const displayProject=projects?.find(project=>project.id===id)
+    console.log(projects,displayProject)
     if(displayProject){
         var {Feature,Technology,clientlink,desc,img1,img2,img3,live,serverlink,title}=displayProject
     }
@@ -31,7 +30,8 @@ const ModalProject = (props) => {
     console.log(displayProject)
     return (
         <div> 
-        <Modal className=''
+            </div>
+        /* <Modal className=''
         {...props}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -75,7 +75,7 @@ const ModalProject = (props) => {
         </Modal.Body>
        
       </Modal>
-      </div>
+      </div> */
   
     );
 };

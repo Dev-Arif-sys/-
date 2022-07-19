@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import Intro from './Intro/Intro';
-import './Components.css'
 import About from './About/About';
-import Skills from './Skills/Skills';
-import Projects from './Projects/Projects';
-import Contact from './Contact/Contact';
 import Blogs from './Blogs/Blogs';
+import './Components.css';
+import Contact from './Contact/Contact';
+import Experience from './Experience/Experience';
+import Intro from './Intro/Intro';
+import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
 
 
 const Components = () => {
@@ -15,6 +15,7 @@ const Components = () => {
             <Intro></Intro>
             < About data-aos='fade-up'></About>
             <Skills></Skills>
+            <Experience/>
             <Projects></Projects>
             <Blogs></Blogs>
             <Contact></Contact>

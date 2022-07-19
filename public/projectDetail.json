@@ -1,6 +1,27 @@
 [
+  {
+    "id": 0,
+    "title": "EMARKET-an e-commerce site",
+    "desc": "An e-commerce with its functionality",
+    "Feature": [
+      "Product  Cart", "Shop List", "Register and Login", "Order Product"," Your Order product list"," Billing section"," Dashboard", "Admin Panel", "Full control from Dashboard"
+
+    ],
+    "Technology": [
+      "React Js", "React Router", "React-Redux", "Node JS", "Express JS", "MongoDB", "Firebase Auth", "React-Bootstrap"
+    ],
+    
+
+
+    "live": "https://emarket-u.netlify.app/",
+    "clientlink": "https://github.com/Dev-Arif-sys/ecommerce-with-redux",
+    "serverlink": "https://github.com/Dev-Arif-sys/emarket-with-redux-server",
+    "img1": "https://i.ibb.co/4sk4Qsh/screencapture-emarket-u-netlify-app-products-61dc59ca66b8ad3117387cba-2022-06-24-02-14-16.png",
+    "img2": "https://i.ibb.co/gDp11jK/screencapture-emarket-u-netlify-app-shop-2022-06-24-02-13-31.png",
+    "img3": "https://i.ibb.co/HqFV91p/screencapture-emarket-u-netlify-app-2022-06-24-02-13-12.png"
+  },
     {
-      "id": 0,
+      "id": 1,
       "title": "RACEREDGE-Bikers solution",
       "desc": "A single product category selling website. It is fully responsive for all devices.",
       "Feature": [
@@ -29,7 +50,7 @@
       "img3": "https://i.ibb.co/C5H5B9c/racer-3-min.png"
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "TRAVISit-Tourism Management Website",
       "desc": "A Tourism application where users can Be able to book various services in the tourist area. A dashboard is added for maintenance and it is fully responsive for all devices",
       "Feature": [
@@ -56,7 +77,7 @@
       "img3": "https://i.ibb.co/QCWPsBN/travisit-3-min.png"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Healtho-Healthcare Website",
       "desc": "A single-page application for a clinic where a patient can make an appointment with a doctor.It is fully responsive for all devices",
       "Feature": [
@@ -77,48 +98,7 @@
       "img1": "https://i.ibb.co/mtLt7yw/healtho-1-min.png",
       "img2": "https://i.ibb.co/3RnQx0t/healtho-2-min.png",
       "img3": "https://i.ibb.co/K6J3d5r/healtho-3-min.png"
-    },
-    {
-      "id": 3,
-      "title": "Financio-e-learning website",
-      "desc": "an e-learning website with a lot of functionality.",
-      "Feature": [
-        "Single page application",
-        " Four ROuting with React Router ",
-        "Contact page integration "
-      ],
-      "Technology": [
-        "HTML",
-        "CSS",
-        "React",
-        "React-Bootstrap",
-        "react-router"
-      ],
-      "live": "https://sanjuhassan79.github.io/dashboard-html-css/",
-      "clientlink": "https://github.com/sanjuhassan79/dashboard-html-css",
-      "img1": "https://i.ibb.co/Sy1fSHq/financio-1-min.png",
-      "img2": "https://i.ibb.co/qYcsP9N/financio-2-min.png",
-      "img3": "https://i.ibb.co/kDbZRGp/financio-3-min.png"
-    },
-    {
-      "id": 4,
-      "title": "The Lazy Crew",
-      "desc": "A collection fo developers from lazy crew team with their salary management .",
-      "Feature": [
-        "Salary Counting ",
-        " Total Salary showing ",
-        "Salary with name "
-      ],
-      "Technology": [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Javascript"
-      ],
-      "live": "https://the-lazy-crew.netlify.app/",
-      "clientlink": "https://github.com/Dev-Arif-sys/The-Lazy-Crew-Developer",
-      "img1": "https://i.ibb.co/PtCFBSD/lazy-1-min.png",
-      "img2": "https://i.ibb.co/FB4D32t/lazy-2-min.png",
-      "img3": "https://i.ibb.co/PtCFBSD/lazy-1-min.png"
     }
+   
+ 
   ]

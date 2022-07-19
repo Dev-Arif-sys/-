@@ -1,20 +1,24 @@
-import logo from './logo.svg';
+
+import Box from '@mui/material/Box';
 import './App.css';
-import SideBar from './Components/SideBar/SideBar';
 import Components from './Components/Components';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ParticleBackground from './Components/ParticleBackground';
 import Footer from './Components/Footer/Footer';
+import NavBar from './Components/NavBar/NavBar';
+import { COLORS } from './constants/theme';
 
 function App() {
   return (
-    <div className='app'>
-      <ParticleBackground></ParticleBackground>
-      <SideBar></SideBar>
+    <Box className='app' style={{background:COLORS.primary}} >
+     <NavBar/>
+      {/* <SideBar></SideBar> */}
+      <Box sx={{width:{lg:"95%",md:"100%",sm:"100%",xs:"100%"}, margin:"0 auto",position:"relative"}} >
+       
       <Components></Components>
+      </Box>
+ 
       <Footer></Footer>
      
-    </div>
+    </Box>
   );
 }
 
