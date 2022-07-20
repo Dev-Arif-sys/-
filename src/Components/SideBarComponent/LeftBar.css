@@ -1,0 +1,40 @@
+.social-btn-left{
+    position: relative;
+    text-align: center;
+}
+.social-btn-left::after{
+    content: " ";
+    background-color: #8892B0;
+    height: 200px;
+    width: 1.5px;
+    margin: 0;
+    position: absolute;
+    top: 210%;
+    left: 35%;
+    
+    transform: translate(-50%, -50%);
+    
+    
+}
+.social-link {
+    font-size: 1.6rem;
+    color:#8892B0;
+    margin-right: .5em;
+    transition: color .5s;
+    margin-bottom: 100px;
+}
+.social-link:hover{
+    color:#CCD6F6; 
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:762px) {
+    .social-btn-left{
+        display: none;
+    }
+    
+
+   
+    
+}

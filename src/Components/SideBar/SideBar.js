@@ -1,11 +1,10 @@
 import { faBars, faBriefcase, faCoffee, faHome, faLaptopCode, faPhoneAlt, faProjectDiagram, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
 import './SideBar.css';
 
 
-const SideBar = () => {
-    const [isToggle,setToggle]=useState(false)
+const SideBar = ({activeNav}) => {
+   
     const element = <FontAwesomeIcon icon={faCoffee} />
     const home = <FontAwesomeIcon icon={faHome} />
     const user = <FontAwesomeIcon icon={faUser} />
@@ -14,16 +13,12 @@ const SideBar = () => {
     const project = <FontAwesomeIcon icon={faProjectDiagram} />
     const contact=<FontAwesomeIcon icon={faPhoneAlt} />
     const bars=<FontAwesomeIcon icon={faBars} />
-    const toggleBar=()=>{
-        
     
-        setToggle(!isToggle)
-        console.log(isToggle)
-    }
     return (
-        <div>
-             <button className='toggle-btn' onClick={toggleBar}> {bars}</button>
-        <div id='sideBar' className={isToggle ? 'active' : 'deactive'}>
+       
+        
+           
+        <div id='sideBar'  style={activeNav && {right:0,transition:'.4s'}}>
            
             <h1>AI</h1>
             <div className='barItems' >
@@ -37,7 +32,8 @@ const SideBar = () => {
               </div>
               
         </div>
-        </div>
+        
+        
     );
 };
 

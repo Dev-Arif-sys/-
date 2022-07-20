@@ -4,8 +4,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
@@ -15,27 +13,23 @@ import { COLORS } from '../../constants/theme';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const NavBar = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+const NavBar = ({anchorElNav,setAnchorElNav}) => {
+
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+   
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+   
 
     return (
-        <AppBar position="sticky" sx={{ background: COLORS.primary, boxShadow: 0 }}>
+        <AppBar position="sticky" sx={{ background: COLORS.primary, boxShadow: 0 ,zIndex:0}}>
             <Box sx={{width:{lg:"95%",md:"100%",sm:"100%",xs:"100%"}, margin:"0 auto"}}>
             <Container maxWidth="xl" >
                 <Toolbar disableGutters>
@@ -132,7 +126,7 @@ const NavBar = () => {
                             {/* <MenuIcon /> */}
                             <HiMenuAlt1 />
                         </IconButton>
-                        <Menu
+                        {/* <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
@@ -155,7 +149,7 @@ const NavBar = () => {
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
-                        </Menu>
+                        </Menu> */}
                     </Box>
                 </Toolbar>
             </Container>

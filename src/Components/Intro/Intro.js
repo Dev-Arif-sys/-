@@ -1,15 +1,15 @@
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+
 import { COLORS, FONTS, SIZES } from '../../constants/theme';
 import LeftBar from '../SideBarComponent/LeftBar';
+import RightBar from '../SideBarComponent/RightBar';
 import './Intro.css';
 
 
 
 const Intro = () => {
-    const facebook= <FaLinkedinIn/>
-    const github=<FaGithub/>
+   
     
     const focusText={
         fontWeight:FONTS.bold, 
@@ -66,7 +66,8 @@ const Intro = () => {
 
                  <Box marginTop={2}>
                    <div className='linkedBtn d-md-flex align-items-center'>
-                       <a className='gen-btn' target="_blank" href='https://drive.google.com/file/d/1Hed6-ArgMUQWKYzGzqdHSNjugFv6v8-_/view?usp=sharing'>resume</a>
+                       <a className='gen-btn resume-btn' target="_blank" href='https://drive.google.com/file/d/1Hed6-ArgMUQWKYzGzqdHSNjugFv6v8-_/view?usp=sharing'>resume</a>
+                       <a className='gen-btn project-btn ' target="_blank" href='https://drive.google.com/file/d/1Hed6-ArgMUQWKYzGzqdHSNjugFv6v8-_/view?usp=sharing'>Projects</a>
                       <div className='ms-3'>
                       {/* <a target="_blank"  href='https://www.linkedin.com/in/mdariful-islam/' className='social-link'> {facebook}</a>
                       <a target="_blank"  href='https://github.com/Dev-Arif-sys' className='social-link'>{github}</a> */}
@@ -76,6 +77,7 @@ const Intro = () => {
                    </Box>
                    </div> 
                    <LeftBar/>
+                   <RightBar/>
         </div>
     );
 };

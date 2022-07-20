@@ -1,0 +1,24 @@
+
+.blur-effect{
+    width: 100%;
+    background-color: #1d0b35;
+   filter: blur(8px);
+   opacity: .6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 7;
+    transition: .4s width;
+    display: none;
+}
+
+
+@media only screen and (max-width:762px) {
+  .blur-effect{
+    display: none;
+  }
+
+   
+    
+}
