@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { HiMenuAlt1 } from "react-icons/hi";
 import { COLORS } from '../../constants/theme';
-
+import './NavBar.css';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -33,11 +33,31 @@ const NavBar = ({anchorElNav,setAnchorElNav}) => {
             <Box sx={{width:{lg:"95%",md:"100%",sm:"100%",xs:"100%"}, margin:"0 auto"}}>
             <Container maxWidth="xl" >
                 <Toolbar disableGutters>
+                    <Box className='logo-effect' >
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="/"
+                        className='logo-text'
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        ARIFUL
+                    </Typography>
 
                     <Typography
                         variant="h6"
                         noWrap
                         component="a"
+                        className='logo-text'
                         href="/"
                         sx={{
                             mr: 2,
@@ -49,8 +69,9 @@ const NavBar = ({anchorElNav,setAnchorElNav}) => {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        ARIFUL
                     </Typography>
+                    </Box>
 
 
                     {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}

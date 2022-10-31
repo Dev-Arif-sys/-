@@ -1,7 +1,6 @@
+import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
-import './Skills.css'
-import Aos from 'aos';
-import 'aos/dist/aos.css'
+import './Skills.css';
  const skills=[
     {
         name:'HTML',
@@ -16,7 +15,7 @@ import 'aos/dist/aos.css'
         logo:'https://i.ibb.co/1ZqT0yP/bootstrap-logo.png'
     }, {
         name:'Javascript',
-        logo:'https://i.ibb.co/cXNnCp8/Java-Script-logo.png'
+        logo:'https://i.ibb.co/0f6XW7Y/download-removebg-preview.png'
     },
     {
         name:'React',
@@ -28,28 +27,25 @@ import 'aos/dist/aos.css'
     },
     {
         name:'Express js',
-        logo:'https://i.ibb.co/v3XmtVb/express-js.png'
+        logo:'https://i.ibb.co/2tx8Wpm/express-logo-removebg-preview.png'
     },
     {
         name:'MongoDB',
-        logo:'https://i.ibb.co/g30062J/mongoDb.png'
+        logo:'https://i.ibb.co/hd5DMTd/Mongo-DB-Emblem-removebg-preview.png'
     },
     {
         name:'Firebase',
-        logo:'https://i.ibb.co/5BNY4GS/firebase.png'
+        logo:'https://i.ibb.co/P5tPXrM/logo-logomark-removebg-preview.png'
     },
     {
         name:'Git',
-        logo:'https://i.ibb.co/VxvX4FQ/git.png'
+        logo:'https://i.ibb.co/RT7RWH9/Git-Icon-1788-C.png'
     },
-    {
-        name:'VS code',
-        logo:'https://i.ibb.co/CK8sCQB/vs-code.png'
-    }
+ 
 ]
 const Skills = () => {
     useEffect(()=>{
-        Aos.init({duration:1000})
+     
     },[])
 
     return (
@@ -59,12 +55,16 @@ const Skills = () => {
         </div>
        
         <h2 className='section-title'>Skills</h2>
-        <div data-aos='zoom-in-right' className='section-value skills-container'>
+        <div className='section-value skills-container'>
          {
-             skills.map(skill=>{
+             skills.map((skill,index)=>{
                  return(
-                     <div className='skill' >
-                         <img className='logo' src={skill.logo}/>
+                     <div 
+                     data-aos="fade-up" 
+                      className='skill' 
+                      data-aos-duration={`${index}00`}
+                      >
+                         <img className='logo' src={skill.logo} loading='lazy'/>
                          <p className='skill-name'>{skill.name}</p>
                      </div>
                  )
