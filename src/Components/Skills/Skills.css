@@ -1,6 +1,8 @@
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-top: 10px;
 }
 .skill {
   text-align: center;
@@ -29,7 +31,7 @@
 
 @media only screen and (max-width: 762px) {
   .skills-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 5px;
   }
 }

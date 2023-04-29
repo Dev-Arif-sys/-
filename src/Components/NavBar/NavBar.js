@@ -1,111 +1,154 @@
-
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import * as React from 'react';
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import * as React from "react";
 import { HiMenuAlt1 } from "react-icons/hi";
-import { COLORS } from '../../constants/theme';
-import './NavBar.css';
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import { COLORS } from "../../constants/theme";
+import "./NavBar.css";
+const pages = [
+  {
+    name: "About",
+    id: "about",
+  },
+  {
+    name: "Skills",
+    id: "skills",
+  },
+  {
+    name: "Experience",
+    id: "experience",
+  },
+  {
+    name: "Projects",
+    id: "projects",
+  },
+  {
+    name: "Contact",
+    id: "contact",
+  },
+];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const NavBar = ({anchorElNav,setAnchorElNav}) => {
+const NavBar = ({ anchorElNav, setAnchorElNav }) => {
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-   
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+  return (
+    <AppBar
+      sx={{
+        background: COLORS.primary,
+     
+        boxShadow: 0,
+        zIndex:"40"
+      }}
+    >
+      <Box
+        sx={{
+          width: { lg: "95%", md: "100%", sm: "100%", xs: "100%" },
+          margin: "0 auto",
+          position: "sticky",
+          top: 0,
+          background: COLORS.primary,
+          zIndex:"40"
+        }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Box className="logo-effect">
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/"
+                className="logo-text"
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                ARIFUL
+              </Typography>
 
-   
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                className="logo-text"
+                href="/"
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                ARIFUL
+              </Typography>
+            </Box>
 
-    return (
-        <AppBar position="sticky" sx={{ background: COLORS.primary, boxShadow: 0 ,zIndex:0}}>
-            <Box sx={{width:{lg:"95%",md:"100%",sm:"100%",xs:"100%"}, margin:"0 auto"}}>
-            <Container maxWidth="xl" >
-                <Toolbar disableGutters>
-                    <Box className='logo-effect' >
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        className='logo-text'
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        ARIFUL
-                    </Typography>
+            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href=""
+              sx={{
+                mr: 2,
+                display: { xs: "flex", md: "none" },
+                flexGrow: 1,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              LOGO
+            </Typography>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "flex-end",
+              }}
+            >
+              {pages.map((page) => (
+                <a
+                  key={page.id}
+                  href={`#${page.id}`}
+                  onClick={handleCloseNavMenu}
+                  style={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    marginRight: "14px",
+                    textDecoration: "none",
+                  }}
+                >
+                  {page.name}
+                </a>
+              ))}
+            </Box>
 
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        className='logo-text'
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        ARIFUL
-                    </Typography>
-                    </Box>
-
-
-                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end" }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
-                    </Box>
-
-                    {/* <Box sx={{ flexGrow: 0 }}>
+            {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <HiMenuAlt1/>
@@ -135,19 +178,25 @@ const NavBar = ({anchorElNav,setAnchorElNav}) => {
             </Menu>
           </Box> */}
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: "flex-end" }}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            {/* <MenuIcon /> */}
-                            <HiMenuAlt1 />
-                        </IconButton>
-                        {/* <Menu
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+                justifyContent: "flex-end",
+              }}
+            >
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                {/* <MenuIcon /> */}
+                <HiMenuAlt1 />
+              </IconButton>
+              {/* <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
@@ -171,11 +220,11 @@ const NavBar = ({anchorElNav,setAnchorElNav}) => {
                                 </MenuItem>
                             ))}
                         </Menu> */}
-                    </Box>
-                </Toolbar>
-            </Container>
             </Box>
-        </AppBar>
-    );
+          </Toolbar>
+        </Container>
+      </Box>
+    </AppBar>
+  );
 };
 export default NavBar;

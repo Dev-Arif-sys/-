@@ -1,94 +1,72 @@
-#sideBar{
-    width: 220px;
-    background-color: #0A192F;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -220px;
-    z-index: 10;
-    transition: .4s ;
-  
-
+#sideBar {
+  width: 220px;
+  background-color: #0a192f;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -220px;
+  z-index: 50;
+  transition: 0.4s;
 }
-.toggle-btn{
-    position: fixed;
-    background-color: rgba(216, 191, 216,.3);    
-    padding: 10px;
-    right: 20px;
-    font-size: 1.5rem;
-    top:30px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 5;
-    border: none;
-    display: none;
-    
+.toggle-btn {
+  position: fixed;
+  background-color: rgba(216, 191, 216, 0.3);
+  padding: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  top: 30px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 5;
+  border: none;
+  display: none;
 }
 
-
-#sideBar h1{
-    font-size: 4rem;
-    margin-top: 0;
-    height: 20%;
-    text-align: center;
-    color: white;
-    margin-bottom: 0;
-    font-weight: 300;
-    
+#sideBar h1 {
+  font-size: 4rem;
+  margin-top: 0;
+  height: 20%;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+  font-weight: 300;
 }
-.barItems{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    height: 60%;
-    width: 100%;
-    margin-left: 70px;
-  
+.barItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 60%;
+  width: 100%;
+  margin-left: 70px;
 }
 
-.barItems a span{
-    margin-left: 5px;
+.barItems a span {
+  margin-left: 5px;
 }
 
 #sideBar a {
-    
-    font-size: .8rem;
-    padding: 16px 8px;
-    margin-bottom: 10px;
-    color: white;
-    text-decoration: none;
+  font-size: 0.8rem;
+  padding: 16px 8px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
   display: inline-block;
-    text-align: left;
-    border-radius: 10px;
-    position: relative;
-  
-    
+  text-align: left;
+  border-radius: 10px;
+  position: relative;
 }
 
+@media only screen and (max-width: 762px) {
+  .deactive {
+    display: none;
+  }
+  #sideBar a span {
+    display: inline-block;
+  }
 
-
-
-
-
-
-@media only screen and (max-width:762px) {
-   
-    
-   
-    
-    .deactive{
-        display: none;
-    }
-    #sideBar a span{
-        display: inline-block;
-    }
-
-    .toggle-btn{
-        display: inline-block;
-    }
-
-   
-   
+  .toggle-btn {
+    display: inline-block;
+  }
 }
