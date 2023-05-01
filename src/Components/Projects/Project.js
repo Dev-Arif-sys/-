@@ -1,40 +1,16 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
-import { BsCodeSlash } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
-const Project = () => {
+const Project = ({ item }) => {
   return (
-    <div>
-      <Grid container alignItems={"flex-start"} spacing={2}>
+    <div id='projects'>
+      <Grid
+        container
+        alignItems={"flex-start"}
+        spacing={2}
+        mb={{ xs: 8, md: 14 }}
+      >
         <Grid item xs={12} sm={12} md={6}>
-          {/* <Box
-            sx={{
-              position: "relative",
-              width: "100%",
-              overflow: "hidden",
-              paddingTop: "66.25%",
-              boxShadow: " -8px 8px 0px 0px rgba(136, 146, 176, .2)",
-              borderRadius: "5px",
-            }}
-          >
-            <iframe 
-                 data-aos="fade-up" 
-                
-                 data-aos-duration={`500`}
-                 
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                    width: "100%",
-                    height: "100%",
-                    border: "none"
-                }} src="https://www.youtube-nocookie.com/embed/wstwjQ1yqWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               
-           
-          </Box> */}
           <Box
             sx={{
               maxWidth: "470px",
@@ -48,7 +24,7 @@ const Project = () => {
                 width: "100%",
                 objectFit: "cover",
               }}
-              src="https://i.ibb.co/VQ5cBbY/Screenshot-211.png"
+              src={item.thumbnail}
             />
           </Box>
         </Grid>
@@ -64,7 +40,7 @@ const Project = () => {
                 padding: "0 0 0 5px",
               }}
             >
-              Qawmi University
+              {item.name}
             </Typography>
 
             <Typography
@@ -77,7 +53,7 @@ const Project = () => {
               fontSize="14px"
               mt={0.5}
             >
-              It fills the gap of Islamic knowledge in the modern era by teaching knowledge about islam online
+              {item.subtitle}
             </Typography>
           </Box>
 
@@ -92,7 +68,7 @@ const Project = () => {
             </Typography>
 
             <Typography color={"#8892b0"} fontSize="14px" mt={0.5}>
-              The platform i created provides them to manage their students and provide them resources to learn. In other word, It is a complete learning management system.
+              {item.solution}
             </Typography>
           </Box>
 
@@ -105,10 +81,18 @@ const Project = () => {
             >
               Features
             </Typography>
-
-            <Typography color={"#8892b0"} fontSize="14px" mt={0.5}>
-              Recorded, Live and Private course selling - Room based teaching system - Personalized chatting app - Integrated SMS and Email System - Automated Attendance system - Assignment, Quiz, Note system
-            </Typography>
+            <ul>
+              {item.features.map((feature) => (
+                <li
+                  style={{ color: "#8892b0", fontSize: "14px" }}
+                  key={feature}
+                >
+                  <Typography color={"#8892b0"} fontSize="14px">
+                    {feature}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
           </Box>
 
           <Grid
@@ -210,7 +194,7 @@ const Project = () => {
                 }}
               >
                 <Stack direction={"row"} justifyContent={"space-evenly"}>
-                  <Box>
+                  {/* <Box>
                     <a href="/">
                       <BsCodeSlash
                         style={{
@@ -220,9 +204,9 @@ const Project = () => {
                         }}
                       />
                     </a>
-                  </Box>
+                  </Box> */}
                   <Box ml={2}>
-                    <a href="/">
+                    <a target="_blank" href={item.live}>
                       <RiComputerLine
                         style={{
                           color: "white",

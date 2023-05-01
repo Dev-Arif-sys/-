@@ -1,45 +1,12 @@
-import { Stack, TextareaAutosize, TextField } from "@mui/material";
-import Aos from "aos";
+import { Box, Stack, Typography } from "@mui/material";
 import "aos/dist/aos.css";
-import emailjs from "emailjs-com";
-import React, { useEffect } from "react";
+import React from "react";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
-  const Swal = require("sweetalert2");
-
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_huvt3xs",
-        "template_462lx2i",
-        e.target,
-        "user_zQrfSKjbCinBkUhYs7MbD"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "message sent",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
   return (
     <div>
       <div className="custom-container" id="contact">
@@ -49,95 +16,95 @@ const Contact = () => {
 
         <h2 className="section-title">Contact</h2>
         <div className="section-value ">
-          <form onSubmit={sendEmail}>
-            <Stack direction={{xs:'column',sm:'row'}} spacing={1}>
-              <TextField
-              data-aos="fade-up" 
-              data-aos-duration="500"
-              fullWidth
-                hiddenLabel
-                placeholder="Name"
-                id="filled-size-small"
-                sx={{
-                  background: "rgba(204, 214, 246, .2)",
-                  "& .MuiInputBase-root": {
-                    color: "white",
-                  },
-                  borderRadius: "10px",
-                }}
-                color={"white"}
-                variant="filled"
-                name="name"
-              />
-
-              <TextField
-              data-aos="fade-up" 
-              data-aos-duration="500"
-              fullWidth
-                hiddenLabel
-                placeholder="Email"
-                type="email"
-                id="filled-size-small"
-                sx={{
-                  background: "rgba(204, 214, 246, .2)",
-                  "& .MuiInputBase-root": {
-                    color: "white",
-                  },
-                  borderRadius: "10px",
-                }}
-                color={"white"}
-                variant="filled"
-                name="email"
-              />
-            </Stack>
-            
-            <TextField
-             data-aos="fade-up" 
-             data-aos-duration="700"
-              fullWidth
-              hiddenLabel
-              placeholder="Subject"
-              id="filled-size-small"
+          <Box
+            sx={{
+              background: "#525F79",
+              mt: 2,
+              py: 5,
+              px: 3,
+              borderRadius: 2,
+            }}
+          >
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
               sx={{
-                background: "rgba(204, 214, 246, .2)",
-                "& .MuiInputBase-root": {
+                color: "rgb(240, 232, 232)",
+                textDecoration: "none",
+                "&:hover": {
                   color: "white",
                 },
-                borderRadius: "10px",
-                my:"7px"
-
               }}
-              color={"white"}
-              variant="filled"
-              name="subject"
-            />
-
-            <TextareaAutosize
-             data-aos="fade-up" 
-             data-aos-duration="900"
-              aria-label="minimum height"
-              minRows={8}
-              placeholder="Write your message"
-              name="message"
-              style={{
-                width: "96%",
-                backgroundColor: "rgba(204, 214, 246, .2)",
-                border: "none",
-                borderRadius: "10px",
-                padding: "10px 20px",
-                color: "white",
-                outline: "none",
-              }}
-            />
-
-            <button className="gen-btn resume-btn"
-            type='submit'
-            data-aos="fade-up" 
-            data-aos-duration="1000"
+              spacing={1}
+              href="mailto:arifru.contact@gmail.com"
+              component={"a"}
             >
-                Send
-            </button>
-          </form>
+              <MdEmail size={20} />
+              <Typography> arifru.contact@gmail.com</Typography>
+            </Stack>
+
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              sx={{
+                color: "rgb(240, 232, 232)",
+                textDecoration: "none",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+              spacing={1}
+              mt={1}
+              target="_black"
+              component={"a"}
+              href="https://wa.me/01757895698"
+            >
+              <IoLogoWhatsapp size={20} />
+              <Typography> +8801757-895698</Typography>
+            </Stack>
+            <Box sx={{ marginTop: 1, display: { xs: "block", md: "none" } }}>
+              <Stack
+                direction={"row"}
+                alignItems={"center"}
+                sx={{
+                  color: "rgb(240, 232, 232)",
+                  textDecoration: "none",
+                  "&:hover": {
+                    color: "white",
+                  },
+                }}
+                spacing={1}
+                mt={1}
+                target="_black"
+                component={"a"}
+                href="https://www.linkedin.com/in/mdariful-islam/"
+              >
+                {" "}
+                <FaLinkedinIn size={18} />
+                <Typography> LinkedIn</Typography>
+              </Stack>
+
+              <Stack
+                direction={"row"}
+                alignItems={"center"}
+                sx={{
+                  color: "rgb(240, 232, 232)",
+                  textDecoration: "none",
+                  "&:hover": {
+                    color: "white",
+                  },
+                }}
+                spacing={1}
+                mt={1}
+                target="_black"
+                component={"a"}
+                href="https://github.com/Dev-Arif-sys"
+              >
+                <FiGithub size={20} />
+                <Typography> Github</Typography>
+              </Stack>
+            </Box>
+          </Box>
         </div>
       </div>
     </div>

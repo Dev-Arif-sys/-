@@ -1,9 +1,9 @@
+import { Stack } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { COLORS } from "../../constants/theme";
@@ -47,82 +47,32 @@ const NavBar = ({ anchorElNav, setAnchorElNav }) => {
     <AppBar
       sx={{
         background: COLORS.primary,
-     
+
         boxShadow: 0,
-        zIndex:"40"
+        zIndex: "40",
       }}
     >
       <Box
         sx={{
-          width: { lg: "95%", md: "100%", sm: "100%", xs: "100%" },
+          width: { lg: "90%", md: "95%", sm: "100%", xs: "100%" },
           margin: "0 auto",
           position: "sticky",
           top: 0,
           background: COLORS.primary,
-          zIndex:"40"
+          zIndex: "40",
         }}
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box className="logo-effect">
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
-                className="logo-text"
+            <Stack direction={"row"} alignItems={"center"}>
+              <Box
+                src="https://i.ibb.co/tK0d2dV/Mountain-Logo-Design-Vector-Graphics-21318904-1-580x387-removebg-preview.png"
+                component={"img"}
                 sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
+                  width: { xs: "80px", md: "100px" },
                 }}
-              >
-                ARIFUL
-              </Typography>
-
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                className="logo-text"
-                href="/"
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                ARIFUL
-              </Typography>
-            </Box>
-
-            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              LOGO
-            </Typography>
+              />
+            </Stack>
             <Box
               sx={{
                 flexGrow: 1,
