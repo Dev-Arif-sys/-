@@ -80,16 +80,22 @@ const Intro = () => {
             expertise in ReactJS, TailwindCSS, Material UI, RTK query, Redux
             Toolkit, JavaScript, TypeScript, and Next.js.
           </Typography>
-          <ul   data-aos="fade-down"
-              data-aos-duration={"700"} style={{ padding: 0, paddingLeft: "10px" }}>
+          <ul
+            data-aos="fade-down"
+            data-aos-duration={"700"}
+            style={{ padding: 0, paddingLeft: "10px" }}
+          >
             <li style={{ color: "#8892b0", fontSize: "14px" }}>
               <Typography color={"#8892b0"} fontSize="14px">
                 Junior Fullstack Developer with 1 year of professional
                 experience in building web applications and websites
               </Typography>
             </li>
-            <li   data-aos="fade-down"
-              data-aos-duration={"800"} style={{ color: "#8892b0", fontSize: "14px" }}>
+            <li
+              data-aos="fade-down"
+              data-aos-duration={"800"}
+              style={{ color: "#8892b0", fontSize: "14px" }}
+            >
               <Typography color={"#8892b0"} fontSize="14px">
                 An experienced and reliable Full Stack Web Developer with a
                 focus on creating custom, advanced, and enterprise-scale web
@@ -106,7 +112,7 @@ const Intro = () => {
               data-aos-duration={"1000"}
               className="gen-btn resume-btn"
               target="_blank"
-              href="https://drive.google.com/file/d/1Hed6-ArgMUQWKYzGzqdHSNjugFv6v8-_/view?usp=sharing"
+              href="https://drive.google.com/file/d/1iEMzSq5cHk3aev01DBy7BMKDGi9zDzSg/view?usp=sharing"
             >
               resume
             </a>
