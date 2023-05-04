@@ -80,14 +80,16 @@ const Intro = () => {
             expertise in ReactJS, TailwindCSS, Material UI, RTK query, Redux
             Toolkit, JavaScript, TypeScript, and Next.js.
           </Typography>
-          <ul style={{ padding: 0, paddingLeft: "10px" }}>
+          <ul   data-aos="fade-down"
+              data-aos-duration={"700"} style={{ padding: 0, paddingLeft: "10px" }}>
             <li style={{ color: "#8892b0", fontSize: "14px" }}>
               <Typography color={"#8892b0"} fontSize="14px">
                 Junior Fullstack Developer with 1 year of professional
                 experience in building web applications and websites
               </Typography>
             </li>
-            <li style={{ color: "#8892b0", fontSize: "14px" }}>
+            <li   data-aos="fade-down"
+              data-aos-duration={"800"} style={{ color: "#8892b0", fontSize: "14px" }}>
               <Typography color={"#8892b0"} fontSize="14px">
                 An experienced and reliable Full Stack Web Developer with a
                 focus on creating custom, advanced, and enterprise-scale web
